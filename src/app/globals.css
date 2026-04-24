@@ -22,6 +22,9 @@
   /* Tipografia */
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-fraunces);
+
+  /* Animações */
+  --animate-scan: scan 1.4s ease-in-out infinite;
 }
 
 body {
@@ -56,5 +59,15 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Animação de varredura para efeito de destaque */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
