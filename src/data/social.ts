@@ -17,3 +17,5 @@ export const SOCIAL_LINKS = [
     href: 'mailto:augusto.felipedev@gmail.com',
   },
 ] as const satisfies readonly SocialLink[]
+
+// 'satisfies' é usado para garantir que o array SOCIAL_LINKS seja do tipo readonly SocialLink[], permitindo a imutabilidade e garantindo que cada item do array siga a estrutura definida por SocialLink.
