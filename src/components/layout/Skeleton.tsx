@@ -9,7 +9,7 @@ export function Skeleton() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHidden(true)
-    }, 4000)
+    }, 2500)
 
     return () => clearTimeout(timer)
   }, [])
@@ -31,7 +31,7 @@ export function Skeleton() {
         </span>
       </div>
 
-      <div className="relative h-px w-48 bg-border-strong overflow-hidden">
+      <div className="relative h-px w-64 bg-border-strong overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-transparent via-accent to-transparent animate-scan" />
       </div>
     </div>
