@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "tailwindcss-animate";
 
 @theme inline {
   /* Cores — paleta noite desértica */
@@ -25,6 +26,21 @@
 
   /* Animações */
   --animate-scan: scan 1.4s ease-in-out infinite;
+
+  /* Shimmer para texto */
+  --animate-shimmer: shimmer-text 15s linear infinite;
+
+  @keyframes shimmer-text {
+    0% {
+      background-position: 50% center;
+    }
+    40% {
+      background-position: -250% center;
+    }
+    100% {
+      background-position: -450% center;
+    }
+  }
 }
 
 body {

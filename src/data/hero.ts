@@ -3,6 +3,6 @@ import type { HeroContent } from '@/types/hero'
 export const HERO: HeroContent = {
   firstName: 'Felipe',
   lastName: 'Augusto',
-  tagline: 'construindo produtos digitais com rigor técnico e atenção ao detalhe.',
-  availability: true,
+  tagline: 'Desenvolvedor Frontend especializado em ecossistema React, Next.js e TypeScript.',
+  availability: false,
 }

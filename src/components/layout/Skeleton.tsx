@@ -3,16 +3,34 @@
 import { useState, useEffect } from 'react'
 import { cn } from '@/lib/cn'
 
+const GREETINGS = [
+  { welcome: 'Bem-vindo ao', highlight: 'meu portfólio' },
+  { welcome: 'Welcome to', highlight: 'my portfolio' },
+  { welcome: 'Willkommen in', highlight: 'meinem Portfolio' },
+]
+
 export function Skeleton() {
   const [hidden, setHidden] = useState(false)
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setHidden(true)
-    }, 4000)
+    const languageInterval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % GREETINGS.length)
+    }, 1500)
 
-    return () => clearTimeout(timer)
+    const fadeTimer = setTimeout(() => {
+      setHidden(true)
+      clearInterval(languageInterval)
+    }, 3500)
+
+    return () => {
+      clearInterval(languageInterval)
+      clearTimeout(fadeTimer)
+    }
   }, [])
+
+  const currentGreeting = GREETINGS[index]
+  if (!currentGreeting) return null
 
   return (
     <div
@@ -24,14 +42,19 @@ export function Skeleton() {
         hidden ? 'opacity-0 pointer-events-none' : 'opacity-100',
       )}
     >
-      <div className="font-serif text-sand text-5xl md:text-7xl font-light tracking-[0.03em] gap-4">
-        Felipe <em className="text-accent not-italic">Augusto</em>
-        <span className="block text-[24px] font-sans mt-6 text-sand/70 text-center tracking-[0.03em]">
-          Frontend Developer
+      <div className="font-serif text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
+        {/* Adicionei uma transição suave na troca do texto */}
+        <div key={index} className="animate-in fade-in duration-300">
+          {currentGreeting.welcome}{' '}
+          <em className="text-accent not-italic">{currentGreeting.highlight}</em>
+        </div>
+
+        <span className="block text-[24px] font-sans mt-6 text-sand/70 tracking-[0.03em]">
+          Felipe Augusto • Frontend Developer
         </span>
       </div>
 
-      <div className="relative h-px w-48 bg-border-strong overflow-hidden">
+      <div className="relative h-px w-64 bg-border-strong overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-transparent via-accent to-transparent animate-scan" />
       </div>
     </div>
