@@ -6,7 +6,7 @@ import { cn } from '@/lib/cn'
 const GREETINGS = [
   { welcome: 'Bem-vindo ao', highlight: 'meu portfólio' },
   { welcome: 'Welcome to', highlight: 'my portfolio' },
-  { welcome: 'Willkommen em', highlight: 'meinem Portfolio' },
+  { welcome: 'Willkommen in', highlight: 'meinem Portfolio' },
 ]
 
 export function Skeleton() {

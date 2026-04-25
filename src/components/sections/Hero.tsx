@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Button } from '../ui/Button'
 import { HERO } from '@/data/hero'
-// import { CORE_STACK } from '@/data/stack'
 import { Download } from 'lucide-react'
 import { ShimmerText } from '../ui/ShimmerText'
 import { STACKS_ICONS } from '@/data/stack'
@@ -28,7 +27,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-2 max-w-350 w-full flex flex-col items-center justify-center pt-60">
+      <div className="relative z-2 max-w-350 w-full flex flex-col items-center justify-center pt-2  md:pt-60">
         {HERO.availability && (
           <div className="inline-flex items-center gap-3 mb-6 text-[11px] uppercase tracking-[0.25em] text-sand-muted">
             <span className="relative w-2 h-2 bg-green rounded-full">
@@ -44,16 +43,13 @@ export function Hero() {
         <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted max-w-4xl leading-relaxed mb-8">
           {HERO.tagline}
         </p>
-        {/*
-        <div className="text-sm text-sand-muted tracking-wider mb-12">{CORE_STACK.join(' • ')}</div>
-        */}
         <Button href="/felipe_augusto_frontend_CV.pdf" trailingIcon={Download} variant="primary">
           Baixar CV
         </Button>
       </div>
 
       {/* Stack Icons */}
-      <div className="absolute bottom-70 flex gap-6 z-2">
+      <div className="absolute bottom-90 md:bottom-70 xl:bottom-60 flex gap-6 z-2">
         {STACKS_ICONS.map((stack) => (
           <Image
             key={stack.name}

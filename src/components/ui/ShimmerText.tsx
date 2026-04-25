@@ -1,6 +1,6 @@
 import { cn } from '@/lib/cn'
 
-type ShimmerVariant = 'sand' | 'moonlight' | 'night'
+type ShimmerVariant = 'night'
 
 type ShimmerTextProps = {
   variant?: ShimmerVariant
@@ -9,16 +9,11 @@ type ShimmerTextProps = {
 }
 
 const VARIANT_CLASSES: Record<ShimmerVariant, string> = {
-  sand: 'bg-[linear-gradient(110deg,var(--color-sand)_35%,#fff_50%,var(--color-sand)_65%)]',
-
-  moonlight:
-    'bg-[linear-gradient(110deg,var(--color-sand-muted)_35%,var(--color-sand)_50%,var(--color-sand-muted)_65%)]',
-
   night:
     'bg-[linear-gradient(110deg,var(--color-sand)_35%,var(--color-sand-dim)_50%,var(--color-sand)_65%)]',
 }
 
-export function ShimmerText({ variant = 'sand', className, children }: ShimmerTextProps) {
+export function ShimmerText({ variant = 'night', className, children }: ShimmerTextProps) {
   return (
     <span
       className={cn(
