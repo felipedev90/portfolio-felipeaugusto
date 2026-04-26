@@ -7,16 +7,16 @@ import { STACKS_ICONS } from '@/data/stack'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-15">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero/hero_background.webp"
+          src="/images/hero/hero_background2.webp"
           alt="Duna solitária sob céu estrelado"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.85] contrast-105 opacity-50"
+          className="object-cover object-center  opacity-20"
         />
       </div>
 
@@ -36,9 +36,10 @@ export function Hero() {
             Disponível para novos projetos
           </div>
         )}
-        <h1 className="font-serif text-center font-light text-[clamp(82px,13vw,200px)] leading-[0.88] tracking-[-0.045em] text-sand mb-12">
-          <ShimmerText variant="night">{HERO.firstName}</ShimmerText>{' '}
-          <span className="text-accent">{HERO.lastName}</span>
+        <h1 className="font-cinzel text-center font-light text-[clamp(82px,13vw,190px)] leading-[0.88] tracking-[-0.045em] text-sand mb-12 ">
+          <ShimmerText variant="night">
+            {HERO.firstName} {HERO.lastName}
+          </ShimmerText>
         </h1>
         <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted max-w-4xl leading-relaxed mb-8">
           {HERO.tagline}
@@ -46,20 +47,20 @@ export function Hero() {
         <Button href="/felipe_augusto_frontend_CV.pdf" trailingIcon={Download} variant="primary">
           Baixar CV
         </Button>
-      </div>
 
-      {/* Stack Icons */}
-      <div className="absolute bottom-90 md:bottom-70 xl:bottom-60 flex gap-6 z-2">
-        {STACKS_ICONS.map((stack) => (
-          <Image
-            key={stack.name}
-            src={stack.icon}
-            alt={`${stack.name} icon`}
-            width={32}
-            height={32}
-            className="filter grayscale opacity-90 hover:opacity-100 hover:grayscale-0 transition-opacity"
-          />
-        ))}
+        {/* Stack Icons */}
+        <div className="flex flex-wrap justify-center gap-6 z-2 mt-10">
+          {STACKS_ICONS.map((stack) => (
+            <Image
+              key={stack.name}
+              src={stack.icon}
+              alt={`${stack.name} icon`}
+              width={32}
+              height={32}
+              className="filter grayscale opacity-90 hover:opacity-100 hover:grayscale-0 transition-opacity"
+            />
+          ))}
+        </div>
       </div>
     </section>
   )
