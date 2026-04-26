@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { Fraunces, DM_Sans } from 'next/font/google'
+import { Fraunces, DM_Sans, Cinzel } from 'next/font/google'
 import './globals.css'
 import { Skeleton } from '@/components/layout/Skeleton'
+import { Nav } from '@/components/layout/Nav'
 
 const fraunces = Fraunces({
   variable: '--font-fraunces',
@@ -18,6 +19,13 @@ const dmSans = DM_Sans({
   weight: ['400', '500'],
 })
 
+const cinzel = Cinzel({
+  variable: '--font-cinzel',
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600'],
+})
+
 export const metadata: Metadata = {
   title: 'Felipe Silva — Frontend Developer',
   description:
@@ -30,9 +38,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${fraunces.variable} ${dmSans.variable} h-full antialiased`}>
+    <html
+      lang="pt-BR"
+      className={`${fraunces.variable} ${dmSans.variable} ${cinzel.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <Skeleton />
+        <Nav />
         {children}
       </body>
     </html>

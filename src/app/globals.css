@@ -23,6 +23,7 @@
   /* Tipografia */
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-fraunces);
+  --font-cinzel: var(--font-cinzel);
 
   /* Animações */
   --animate-scan: scan 1.4s ease-in-out infinite;
