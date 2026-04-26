@@ -23,7 +23,7 @@ export function Hero() {
       {/* Overlay gradient */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-1 bg-linear-to-t from-bg/60 to-transparent"
+        className="absolute inset-0 z-1 bg-linear-to-t from-bg to-transparent"
       />
 
       {/* Content */}
@@ -36,12 +36,12 @@ export function Hero() {
             Disponível para novos projetos
           </div>
         )}
-        <h1 className="font-display text-center font-light text-[clamp(82px,13vw,190px)] leading-[0.88] tracking-[-0.045em] text-sand mb-12 ">
+        <h1 className="font-display text-center font-light text-[clamp(82px,13vw,190px)] leading-[0.88] tracking-[-0.045em] text-sand mb-8 ">
           <ShimmerText variant="night">
             {HERO.firstName} {HERO.lastName}
           </ShimmerText>
         </h1>
-        <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted max-w-4xl leading-relaxed mb-8">
+        <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted max-w-5xl leading-relaxed mb-8">
           {HERO.tagline}
         </p>
         <Button href="/felipe_augusto_frontend_CV.pdf" trailingIcon={Download} variant="primary">
