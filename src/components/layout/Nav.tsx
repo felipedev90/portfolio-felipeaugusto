@@ -10,7 +10,7 @@ export function Nav() {
       <header className="fixed top-0 left-0 right-0 z-40 px-6 md:px-12 py-7 flex justify-between items-center mix-blend-difference">
         <a
           href="#"
-          className="font-cinzel text-[17px] text-sand uppercase tracking-[0.2em] font-medium"
+          className="font-display text-[17px] text-sand uppercase tracking-[0.2em] font-medium"
         >
           Felipe<span className="text-accent">.</span>DEV
         </a>

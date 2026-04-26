@@ -42,7 +42,7 @@ export function Skeleton() {
         hidden ? 'opacity-0 pointer-events-none' : 'opacity-100',
       )}
     >
-      <div className="font-cinzel text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
+      <div className="font-display text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
         {/* Adicionei uma transição suave na troca do texto */}
         <div key={index} className="animate-in fade-in duration-300">
           {currentGreeting.welcome}{' '}
