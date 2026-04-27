@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Fraunces, DM_Sans, Cinzel } from 'next/font/google'
 import './globals.css'
-import { Skeleton } from '@/components/layout/Skeleton'
+import { SkeletonClient as Skeleton } from '@/components/layout/SkeletonClient'
 import { Nav } from '@/components/layout/Nav'
 
 const fraunces = Fraunces({
@@ -27,7 +27,7 @@ const cinzel = Cinzel({
 })
 
 export const metadata: Metadata = {
-  title: 'Felipe Silva — Frontend Developer',
+  title: 'Felipe Augusto | Frontend Developer',
   description:
     'Frontend developer construindo produtos digitais com React, Next.js e TypeScript. Portfolio de projetos em produção.',
 }

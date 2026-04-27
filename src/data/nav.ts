@@ -3,11 +3,11 @@ import type { CTA } from '@/types/cta'
 export const NAV_ITEMS: readonly CTA[] = [
   {
     label: 'Sobre',
-    href: '#about',
+    href: '/#about',
   },
   {
     label: 'Projetos',
-    href: '#projects',
+    href: '/#projects',
   },
   {
     label: 'Contato',

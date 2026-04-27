@@ -9,17 +9,23 @@ const GREETINGS = [
   { welcome: 'Willkommen in', highlight: 'meinem Portfolio' },
 ]
 
+const STORAGE_KEY = 'skeletonShown'
+
 export function Skeleton() {
-  const [hidden, setHidden] = useState(false)
+  const [faded, setFaded] = useState(false)
   const [index, setIndex] = useState(0)
+  const [shouldRender] = useState(() => sessionStorage.getItem(STORAGE_KEY) !== '1')
 
   useEffect(() => {
+    if (!shouldRender) return
+
     const languageInterval = setInterval(() => {
       setIndex((prev) => (prev + 1) % GREETINGS.length)
     }, 1500)
 
     const fadeTimer = setTimeout(() => {
-      setHidden(true)
+      setFaded(true)
+      sessionStorage.setItem(STORAGE_KEY, '1')
       clearInterval(languageInterval)
     }, 3500)
 
@@ -27,7 +33,9 @@ export function Skeleton() {
       clearInterval(languageInterval)
       clearTimeout(fadeTimer)
     }
-  }, [])
+  }, [shouldRender])
+
+  if (!shouldRender) return null
 
   const currentGreeting = GREETINGS[index]
   if (!currentGreeting) return null
@@ -39,7 +47,7 @@ export function Skeleton() {
         'fixed inset-0 z-100',
         'bg-bg flex flex-col items-center justify-center gap-8',
         'transition-opacity duration-700',
-        hidden ? 'opacity-0 pointer-events-none' : 'opacity-100',
+        faded ? 'opacity-0 pointer-events-none' : 'opacity-100',
       )}
     >
       <div className="font-display text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
