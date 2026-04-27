@@ -3,7 +3,7 @@ import { Button } from '../ui/Button'
 import { HERO } from '@/data/hero'
 import { Download } from 'lucide-react'
 import { ShimmerText } from '../ui/ShimmerText'
-import { STACKS_ICONS } from '@/data/stack'
+import { CORE_STACK } from '@/data/stack'
 
 export function Hero() {
   return (
@@ -50,7 +50,7 @@ export function Hero() {
 
         {/* Stack Icons */}
         <div className="flex flex-wrap justify-center gap-6 z-2 mt-10">
-          {STACKS_ICONS.map((stack) => (
+          {CORE_STACK.map((stack) => (
             <Image
               key={stack.name}
               src={stack.icon}
