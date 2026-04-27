@@ -7,7 +7,7 @@ import { CORE_STACK } from '@/data/stack'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-15">
+    <section className="relative min-h-225 md:min-h-225 lg:min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-15">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
