@@ -27,9 +27,62 @@ const cinzel = Cinzel({
 })
 
 export const metadata: Metadata = {
-  title: 'Felipe Augusto | Frontend Developer',
+  metadataBase: new URL('https://devfelipeaugusto.com.br'),
+  title: {
+    default: 'Felipe Augusto — Frontend Developer',
+    template: '%s | Felipe Augusto',
+  },
   description:
-    'Frontend developer construindo produtos digitais com React, Next.js e TypeScript. Portfolio de projetos em produção.',
+    'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript. Portfolio de projetos em produção com foco em performance, acessibilidade e qualidade de código.',
+  keywords: [
+    'Frontend Developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Portfolio',
+    'Felipe Augusto',
+    'Desenvolvedor Frontend',
+    'Jundiaí',
+  ],
+  authors: [{ name: 'Felipe Augusto', url: 'https://devfelipeaugusto.com.br' }],
+  creator: 'Felipe Augusto',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://devfelipeaugusto.com.br',
+    siteName: 'Felipe Augusto',
+    title: 'Felipe Augusto — Frontend Developer',
+    description:
+      'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Felipe Augusto — Frontend Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Felipe Augusto — Frontend Developer',
+    description:
+      'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://devfelipeaugusto.com.br',
+  },
 }
 
 export default function RootLayout({
@@ -43,6 +96,30 @@ export default function RootLayout({
       className={`${fraunces.variable} ${dmSans.variable} ${cinzel.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Felipe Augusto',
+              url: 'https://devfelipeaugusto.com.br',
+              image: 'https://devfelipeaugusto.com.br/og-image.png',
+              sameAs: [
+                'https://github.com/felipedev90',
+                'https://www.linkedin.com/in/felipesilva90/',
+              ],
+              jobTitle: 'Frontend Developer',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Jundiaí',
+                addressRegion: 'SP',
+                addressCountry: 'BR',
+              },
+              knowsAbout: ['React', 'Next.js', 'TypeScript', 'Frontend Development'],
+            }),
+          }}
+        />
         <Skeleton />
         <Nav />
         {children}

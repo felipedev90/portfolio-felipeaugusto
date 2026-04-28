@@ -1,13 +1,16 @@
+'use client'
+
 import Image from 'next/image'
 import { Button } from '../ui/Button'
 import { HERO } from '@/data/hero'
 import { Download } from 'lucide-react'
 import { ShimmerText } from '../ui/ShimmerText'
 import { CORE_STACK } from '@/data/stack'
+import { motion } from 'motion/react'
 
 export function Hero() {
   return (
-    <section className="relative min-h-225 md:min-h-225 lg:min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-15">
+    <section className="relative min-h-200 md:min-h-225 lg:min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pb-15">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -36,12 +39,12 @@ export function Hero() {
             Disponível para novos projetos
           </div>
         )}
-        <h1 className="font-display text-center font-light text-[clamp(82px,13vw,190px)] leading-[0.88] tracking-[-0.045em] text-sand mb-8 ">
+        <h1 className="font-display text-center font-light text-[clamp(80px,13vw,120px)] leading-[0.88] tracking-[-0.045em] text-sand mb-8 ">
           <ShimmerText variant="night">
             {HERO.firstName} {HERO.lastName}
           </ShimmerText>
         </h1>
-        <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted max-w-5xl leading-relaxed mb-8">
+        <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted md:max-w-3xl lg:max-w-5xl leading-relaxed mb-8">
           {HERO.tagline}
         </p>
         <Button href="/felipe-augusto-frontend-cv.pdf" trailingIcon={Download} variant="primary">
@@ -49,18 +52,40 @@ export function Hero() {
         </Button>
 
         {/* Stack Icons */}
-        <div className="flex flex-wrap justify-center gap-6 z-2 mt-10">
+
+        <motion.div
+          className="flex gap-6 mt-16 md:mt-20"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                delayChildren: 0.4,
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {CORE_STACK.map((stack) => (
-            <Image
+            <motion.div
               key={stack.name}
-              src={stack.icon}
-              alt={`${stack.name} icon`}
-              width={32}
-              height={32}
-              className="filter grayscale opacity-90 hover:opacity-100 hover:grayscale-0 transition-opacity"
-            />
+              variants={{
+                hidden: { opacity: 0, y: 20, scale: 0.8 },
+                visible: { opacity: 1, y: 0, scale: 1 },
+              }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+              <Image
+                src={stack.icon}
+                alt={`${stack.name} icon`}
+                width={32}
+                height={32}
+                className="filter grayscale opacity-90 hover:opacity-100 hover:grayscale-0 transition-opacity"
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

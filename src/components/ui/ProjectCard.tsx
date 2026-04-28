@@ -5,12 +5,13 @@ import Image from 'next/image'
 import { Link, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
 import type { Project } from '@/types/projects'
 
-export type ProjectCardProps = {
+type ProjectCardProps = {
   project: Project
   isActive?: boolean
+  priority?: boolean
 }
 
-export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
+export function ProjectCard({ project, isActive = false, priority = false }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   // Define se o texto é longo o suficiente para precisar do botão
@@ -19,7 +20,7 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
   return (
     <div
       className={`
-        group relative flex flex-col w-[85vw] sm:w-87.5 shrink-0 overflow-hidden 
+        group relative flex flex-col w-[80vw] sm:w-80 md:w-full shrink-0 overflow-hidden 
         rounded-md border border-border bg-bg-2 transition-all duration-500
         ${isActive ? 'opacity-100 scale-100' : 'opacity-50 scale-95 md:opacity-100 md:scale-100'}
       `}
@@ -31,6 +32,7 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
           src={project.image}
           alt={project.title}
           fill
+          priority={priority}
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
