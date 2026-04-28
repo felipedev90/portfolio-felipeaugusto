@@ -62,80 +62,39 @@ export function Contact() {
             Entre em contato:
           </h3>
 
-          {/* O Card Principal - Removido o min-w-xl para respeitar o celular */}
-          <div className="w-full flex flex-col p-4 border border-border-strong bg-border-strong/80 backdrop-blur-md mb-8">
-            {/* Grupo 1: Ícones Sociais (Estilo "Dock" em 4 colunas) */}
+          {/* O Card Principal */}
+          <div className="w-full flex flex-col p-4 border border-border-strong bg-sand/40 backdrop-blur-md mb-8">
+            {/* Grupo 1: Ícones Sociais */}
             <div className="grid grid-cols-4 gap-2 mb-2">
-              <a
-                href={SOCIAL_LINKS.find((link) => link.platform === 'linkedin')?.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center p-3 rounded-xl hover:bg-white/5 transition-all duration-300"
-                title="LinkedIn"
-              >
-                <Image
-                  src={SOCIAL_ICONS.linkedin}
-                  alt="LinkedIn"
-                  width={50}
-                  height={50}
-                  className="opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.find((link) => link.platform === 'github')?.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center p-3 rounded-xl hover:bg-white/5 transition-all duration-300"
-                title="GitHub"
-              >
-                <Image
-                  src={SOCIAL_ICONS.github}
-                  alt="GitHub"
-                  width={50}
-                  height={50}
-                  className="opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.find((link) => link.platform === 'whatsapp')?.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center p-3 rounded-xl hover:bg-white/5 transition-all duration-300"
-                title="WhatsApp"
-              >
-                <Image
-                  src={SOCIAL_ICONS.whatsapp}
-                  alt="WhatsApp"
-                  width={50}
-                  height={50}
-                  className="opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.find((link) => link.platform === 'email')?.href}
-                className="group flex items-center justify-center p-3 rounded-xl hover:bg-white/5 transition-all duration-300"
-                title="Email"
-              >
-                <Image
-                  src={SOCIAL_ICONS.email}
-                  alt="Email"
-                  width={50}
-                  height={50}
-                  className="opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                />
-              </a>
+              {SOCIAL_LINKS.map(({ platform, href, label }) => (
+                <a
+                  key={platform}
+                  href={href}
+                  aria-label={`Acessar ${label}`}
+                  target={platform === 'email' ? undefined : '_blank'}
+                  rel={platform === 'email' ? undefined : 'noopener noreferrer'}
+                  className="flex items-center justify-center p-2 rounded-md hover:scale-110 transition-all duration-300 group"
+                >
+                  <Image
+                    src={SOCIAL_ICONS[platform]}
+                    alt={`${platform} icon`}
+                    width={50}
+                    height={50}
+                    className="opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                  />
+                </a>
+              ))}
             </div>
 
             {/* Divisor Isolado */}
             <div className="h-px w-full bg-border-strong/60 my-3" />
 
-            {/* Grupo 2: Localização (Centralizado e alinhado) */}
+            {/* Grupo 2: Localização */}
             <div className="flex items-center justify-center gap-3 p-2">
-              <MapPin className="w-5 h-5 text-sand-muted opacity-80" strokeWidth={1.5} />
-              <span className="font-sans text-sm text-sand-muted tracking-wide">Jundiaí / SP</span>
+              <MapPin className="w-5 h-5 text-black/70" strokeWidth={1.5} />
+              <span className="font-sans text-md md:text-lg text-black/70 tracking-wide">
+                Jundiaí / SP
+              </span>
             </div>
           </div>
 

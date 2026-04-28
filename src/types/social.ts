@@ -5,7 +5,3 @@ export type SocialLink = {
   label: string
   href: string
 }
-
-export type SocialIcon = {
-  [key in SocialPlatform]: string
-}
