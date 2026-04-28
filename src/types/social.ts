@@ -1,4 +1,4 @@
-export type SocialPlatform = 'github' | 'linkedin' | 'email'
+export type SocialPlatform = 'github' | 'linkedin' | 'email' | 'whatsapp'
 
 export type SocialLink = {
   platform: SocialPlatform

@@ -36,6 +36,8 @@ const TECH_DICT = {
   vitest: { name: 'Vitest', icon: '/images/stacks/vitest.svg' },
   playwright: { name: 'Playwright', icon: '/images/stacks/playwright.svg' },
   testinglibrary: { name: 'Testing Library', icon: '/images/stacks/testinglibrary.svg' },
+
+  ia: { name: 'Claude', icon: '/images/stacks/claude.svg' },
 } as const satisfies Record<string, Technology>
 
 export const CORE_STACK: Technology[] = [
@@ -88,5 +90,9 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
       TECH_DICT.vercel,
       TECH_DICT.vscode,
     ],
+  },
+  {
+    title: 'IA',
+    stacks: [TECH_DICT.ia],
   },
 ]
