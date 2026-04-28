@@ -1,4 +1,4 @@
-import { Technology } from './skills'
+import type { Technology } from './skills'
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack'
 
