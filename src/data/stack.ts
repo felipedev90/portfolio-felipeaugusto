@@ -1,6 +1,6 @@
 import type { Technology, TechCategory } from '../types/skills'
 
-const TECH_DICT = {
+export const TECH_DICT = {
   // Linguagens & Core
   html: { name: 'HTML5', icon: '/images/stacks/html5.svg' },
   css: { name: 'CSS3', icon: '/images/stacks/css3.svg' },
