@@ -31,7 +31,7 @@ export function Contact() {
         Contato
       </div>
       <div className="grid xl:grid-cols-[1.1fr_1fr] gap-16 md:gap-18 items-center lg:items-start">
-        <h2 className="font-display text-center md:text-start text-5xl md:text-[90px] font-light leading-tight tracking-[-0.03em]">
+        <h2 className="font-display text-center md:text-start text-5xl md:text-7xl lg:text-[90px] font-light leading-tight tracking-[-0.03em]">
           <span>{prefix}</span>
           <span className="relative flex flex-col justify-center overflow-hidden px-1 py-1">
             <span className="invisible pointer-events-none font-medium">{longestWord}</span>

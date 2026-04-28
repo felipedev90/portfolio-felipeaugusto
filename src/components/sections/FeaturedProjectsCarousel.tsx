@@ -13,7 +13,7 @@ export function FeaturedProjectsCarousel({ projects }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: 'center',
-    containScroll: 'trimSnaps',
+    containScroll: false,
   })
 
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -40,10 +40,15 @@ export function FeaturedProjectsCarousel({ projects }: Props) {
   }, [emblaApi, onSelect])
 
   return (
-    <div className="w-full overflow-hidden" ref={emblaRef}>
-      <div className="flex touch-pan-y gap-4 py-4">
+    <div className="-mx-6 overflow-hidden" ref={emblaRef}>
+      <div className="flex touch-pan-y gap-4 px-6 py-4">
         {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} isActive={index === selectedIndex} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            isActive={index === selectedIndex}
+            priority={index < 2}
+          />
         ))}
       </div>
     </div>

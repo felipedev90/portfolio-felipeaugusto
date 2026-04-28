@@ -5,9 +5,8 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Tecnologias | Felipe Augusto',
-  description:
-    'Tecnologias e ferramentas que utilizo no meu dia a dia como desenvolvedor frontend.',
+  title: 'Tecnologias',
+  description: 'Tecnologias e ferramentas que utilizo no dia a dia como desenvolvedor frontend.',
 }
 
 export default function StackPage() {

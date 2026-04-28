@@ -12,10 +12,13 @@ export function FeaturedProjects() {
   const featuredProjects = PROJECTS.filter((p) => p.featured)
 
   return (
-    <section className="px-6 md:px-12 py-10 md:py-20 lg:py-32 xl:py-40 max-w-350 mx-auto w-full">
+    <section
+      id="projects"
+      className="px-6 md:px-12 py-10 md:py-20 lg:py-32 xl:py-40 max-w-350 mx-auto w-full"
+    >
       <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
         <div>
-          <div className="flex font-serif uppercase items-center justify-center lg:justify-start gap-5 mb-4 text-[18px] tracking-[0.35em] text-sand-muted">
+          <div className="flex font-serif uppercase items-center justify-center md:justify-start gap-5 mb-4 text-[18px] tracking-[0.35em] text-sand-muted">
             <span className="w-8 h-px bg-accent" />
             Portfólio
           </div>

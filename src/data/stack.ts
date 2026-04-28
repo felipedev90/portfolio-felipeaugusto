@@ -44,7 +44,8 @@ export const CORE_STACK: Technology[] = [
   TECH_DICT.react,
   TECH_DICT.next,
   TECH_DICT.ts,
-  TECH_DICT.node,
+  TECH_DICT.sass,
+  TECH_DICT.tailwind,
 ]
 
 export const STACKS_PAGE_DATA: TechCategory[] = [
