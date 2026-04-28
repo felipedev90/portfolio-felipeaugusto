@@ -64,17 +64,6 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
     ],
   },
   {
-    title: 'Backend',
-    stacks: [
-      TECH_DICT.node,
-      TECH_DICT.fastify,
-      TECH_DICT.postgres,
-      TECH_DICT.prisma,
-      TECH_DICT.zod,
-      TECH_DICT.jwt,
-    ],
-  },
-  {
     title: 'Qualidade, Ferramentas & Métodos',
     stacks: [
       TECH_DICT.git,
@@ -92,7 +81,14 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
     ],
   },
   {
-    title: 'IA',
-    stacks: [TECH_DICT.ia],
+    title: 'Em estudo - Backend & API',
+    stacks: [
+      TECH_DICT.node,
+      TECH_DICT.fastify,
+      TECH_DICT.postgres,
+      TECH_DICT.prisma,
+      TECH_DICT.zod,
+      TECH_DICT.jwt,
+    ],
   },
 ]

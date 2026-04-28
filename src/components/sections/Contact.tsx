@@ -100,7 +100,7 @@ export function Contact() {
 
           {/* Botão de CV */}
           <Button
-            href="/felipe_augusto_frontend_CV.pdf"
+            href="/felipe-augusto-frontend-cv.pdf"
             trailingIcon={ArrowRight}
             variant="primary"
             className="md:w-full justify-center "
