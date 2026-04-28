@@ -43,9 +43,15 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
           ${isActive ? 'translate-y-0' : 'translate-y-full lg:group-hover:translate-y-0'}
         `}
         >
-          {project.technologies.map((tech) => (
+          {project.technologies.map((tech, index) => (
             <div key={tech.name} className="relative w-7 h-7" title={tech.name}>
-              <Image src={tech.icon} alt={tech.name} fill className="object-contain" />
+              <Image
+                src={tech.icon}
+                alt={tech.name}
+                priority={index < 2}
+                fill
+                className="object-contain"
+              />
             </div>
           ))}
         </div>

@@ -6,10 +6,6 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
     items: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'SASS', 'HTML5', 'CSS3', 'CSS Modules'],
   },
   {
-    title: 'Backend',
-    items: ['Node.js', 'Fastify', 'PostgreSQL', 'Prisma', 'JWT'],
-  },
-  {
     title: 'Qualidade & CI/CD',
     items: [
       'Vitest',
@@ -21,6 +17,7 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
       'Vite',
       'Railway',
       'Vercel',
+      'Render',
     ],
   },
 ] as const satisfies readonly SkillCategory[]

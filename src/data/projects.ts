@@ -6,9 +6,9 @@ export const PROJECTS: Project[] = [
     id: 'devstore',
     title: 'DevStore',
     description:
-      'E-commerce fullstack de periféricos tech. Autenticação JWT e API REST própria (Fastify + PostgreSQL). Foco em SSR/SSG/ISR, testes automatizados e CI/CD.',
+      'E-commerce com Next.js 15, App Router, SSG/SSR/ISR, Server Components, design system próprio, Zustand pra estado e 30+ testes automatizados e CI/CD.',
     image: '/images/projects/devstore.webp',
-    category: 'fullstack',
+    category: 'frontend',
     technologies: [
       TECH_DICT.next,
       TECH_DICT.ts,
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/devstore-api.git',
       live: 'https://dev-store-zeta.vercel.app/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'freelancer',
