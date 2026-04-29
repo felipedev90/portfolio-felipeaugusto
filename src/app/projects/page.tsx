@@ -18,8 +18,8 @@ export default function StackPage() {
       {/* Botão Voltar */}
 
       <div className="relative z-10 w-full max-w-5xl flex flex-col items-center mt-15 md:mt-20">
-        <div className="flex font-serif uppercase items-center gap-5 mb-16 text-[18px] tracking-[0.35em] text-sand-muted">
-          <span className="w-8 h-px bg-accent" />
+        <div className="flex font-serif uppercase items-center text-center gap-5 mb-16 text-[18px] tracking-[0.35em] text-sand-muted">
+          <span className="w-8 h-px bg-accent " />
           Em construção
           <span className="w-8 h-px bg-accent" />{' '}
         </div>
