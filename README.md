@@ -30,10 +30,10 @@ Portfolio profissional construído com foco em performance, acessibilidade e pr�
 
 ## Como rodar
 
-\`\`\`bash
+```bash
 npm install
 npm run dev
-\`\`\`
+```
 
 Servidor em [http://localhost:3000](http://localhost:3000).
 
@@ -59,7 +59,7 @@ Servidor em [http://localhost:3000](http://localhost:3000).
 
 ## Estrutura
 
-\`\`\`
+```bash
 src/
 ├── app/ # Rotas (App Router)
 ├── components/
@@ -70,7 +70,7 @@ src/
 ├── types/ # Tipagens compartilhadas
 ├── lib/ # Utilities (cn)
 └── hooks/ # Custom hooks (useMediaQuery)
-\`\`\`
+```
 
 ---
 
