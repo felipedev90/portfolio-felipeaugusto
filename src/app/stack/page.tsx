@@ -1,6 +1,5 @@
 import { STACKS_PAGE_DATA } from '@/data/stack'
-import { ArrowLeft } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { BackButton } from '@/components/ui/BackButton'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
@@ -58,10 +57,9 @@ export default function StackPage() {
             </div>
           ))}
         </div>
+
         <div className="mt-20 items-start self-start">
-          <Button href="/" variant="ghost" leadingIcon={ArrowLeft}>
-            Voltar
-          </Button>
+          <BackButton />
         </div>
       </div>
     </div>

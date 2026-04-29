@@ -44,7 +44,7 @@ export function Hero() {
             {HERO.firstName} {HERO.lastName}
           </ShimmerText>
         </h1>
-        <p className="font-serif text-center font-light text-xl md:text-2xl text-sand-muted md:max-w-3xl lg:max-w-5xl leading-relaxed mb-8">
+        <p className="font-serif  text-center font-light text-xl md:text-2xl text-white/70 md:max-w-3xl lg:max-w-5xl leading-relaxed mb-8">
           {HERO.tagline}
         </p>
         <Button href="/felipe-augusto-frontend-cv.pdf" trailingIcon={Download} variant="primary">
@@ -61,7 +61,7 @@ export function Hero() {
             hidden: {},
             visible: {
               transition: {
-                delayChildren: 0.4,
+                delayChildren: 0.1,
                 staggerChildren: 0.15,
               },
             },
