@@ -47,7 +47,12 @@ export function Hero() {
         <p className="font-serif  text-center font-light text-xl md:text-2xl text-white/70 md:max-w-3xl lg:max-w-5xl leading-relaxed mb-8">
           {HERO.tagline}
         </p>
-        <Button href="/felipe-augusto-frontend-cv.pdf" trailingIcon={Download} variant="primary">
+        <Button
+          href="/felipe_augusto_frontend_cv.pdf"
+          download="felipe-augusto-frontend-cv.pdf"
+          trailingIcon={Download}
+          variant="primary"
+        >
           Baixar CV
         </Button>
 

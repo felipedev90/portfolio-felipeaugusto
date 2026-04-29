@@ -99,6 +99,14 @@ export default async function RootLayout({
       lang="pt-BR"
       className={`${fraunces.variable} ${dmSans.variable} ${cinzel.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero/hero_background2.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
