@@ -55,10 +55,6 @@ export function Skeleton({ initialShown }: SkeletonProps) {
           {currentGreeting.welcome}{' '}
           <em className="text-accent not-italic">{currentGreeting.highlight}</em>
         </div>
-
-        <span className="block text-[24px] font-sans mt-6 text-sand/70 tracking-[0.03em]">
-          Felipe Augusto • Frontend Developer
-        </span>
       </div>
 
       <div className="relative h-px w-64 bg-border-strong overflow-hidden">
