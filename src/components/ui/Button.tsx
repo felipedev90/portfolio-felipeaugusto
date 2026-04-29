@@ -40,6 +40,10 @@ function isExternalUrl(href: string): boolean {
   return /^(https?:|mailto:|tel:)/.test(href)
 }
 
+function isStaticAsset(href: string): boolean {
+  return /\.(pdf|zip|doc|docx|xls|xlsx|png|jpg|jpeg|webp|svg)$/i.test(href)
+}
+
 export function Button({
   href,
   variant = 'primary',
@@ -51,6 +55,7 @@ export function Button({
   children,
 }: ButtonProps) {
   const isExternal = external ?? isExternalUrl(href)
+  const useNativeAnchor = isExternal || isStaticAsset(href)
   const classes = cn(variantStyles[variant], className)
 
   const content = (
@@ -61,14 +66,14 @@ export function Button({
     </>
   )
 
-  if (isExternal) {
+  if (useNativeAnchor) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
         download={download}
+        className={classes}
       >
         {content}
       </a>
