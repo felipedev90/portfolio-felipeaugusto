@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Fraunces, DM_Sans, Cinzel } from 'next/font/google'
 import './globals.css'
-import { SkeletonClient as Skeleton } from '@/components/layout/SkeletonClient'
+import { cookies } from 'next/headers'
+import { Skeleton } from '@/components/layout/Skeleton'
 import { Nav } from '@/components/layout/Nav'
 
 const fraunces = Fraunces({
@@ -85,11 +86,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const cookieStore = await cookies()
+  const skeletonShown = cookieStore.get('skeleton_shown')?.value === '1'
+
   return (
     <html
       lang="pt-BR"
@@ -120,7 +124,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <Skeleton />
+        <Skeleton initialShown={skeletonShown} />
         <Nav />
         {children}
       </body>

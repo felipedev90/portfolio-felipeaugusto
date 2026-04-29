@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { cn } from '@/lib/cn'
+import { markSkeletonShown } from '@/actions/skeleton'
 
 const GREETINGS = [
   { welcome: 'Bem-vindo ao', highlight: 'meu portfólio' },
@@ -9,23 +10,22 @@ const GREETINGS = [
   { welcome: 'Willkommen in', highlight: 'meinem Portfolio' },
 ]
 
-const STORAGE_KEY = 'skeletonShown'
+type SkeletonProps = {
+  initialShown: boolean
+}
 
-export function Skeleton() {
+export function Skeleton({ initialShown }: SkeletonProps) {
   const [faded, setFaded] = useState(false)
   const [index, setIndex] = useState(0)
-  const [shouldRender] = useState(() => sessionStorage.getItem(STORAGE_KEY) !== '1')
 
   useEffect(() => {
-    if (!shouldRender) return
-
     const languageInterval = setInterval(() => {
       setIndex((prev) => (prev + 1) % GREETINGS.length)
     }, 1500)
 
     const fadeTimer = setTimeout(() => {
       setFaded(true)
-      sessionStorage.setItem(STORAGE_KEY, '1')
+      void markSkeletonShown()
       clearInterval(languageInterval)
     }, 3500)
 
@@ -33,9 +33,9 @@ export function Skeleton() {
       clearInterval(languageInterval)
       clearTimeout(fadeTimer)
     }
-  }, [shouldRender])
+  }, [])
 
-  if (!shouldRender) return null
+  if (initialShown) return null
 
   const currentGreeting = GREETINGS[index]
   if (!currentGreeting) return null
@@ -50,8 +50,7 @@ export function Skeleton() {
         faded ? 'opacity-0 pointer-events-none' : 'opacity-100',
       )}
     >
-      <div className="font-display text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
-        {/* Adicionei uma transição suave na troca do texto */}
+      <div className="font-serif text-sand text-5xl md:text-7xl font-light tracking-[0.03em] flex flex-col items-center text-center">
         <div key={index} className="animate-in fade-in duration-300">
           {currentGreeting.welcome}{' '}
           <em className="text-accent not-italic">{currentGreeting.highlight}</em>
