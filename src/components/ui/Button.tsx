@@ -11,6 +11,7 @@ type ButtonProps = {
   leadingIcon?: LucideIcon
   trailingIcon?: LucideIcon
   external?: boolean
+  download?: boolean | string
   className?: string
   children: React.ReactNode
 }
@@ -45,6 +46,7 @@ export function Button({
   leadingIcon,
   trailingIcon,
   external,
+  download,
   className,
   children,
 }: ButtonProps) {
@@ -61,14 +63,20 @@ export function Button({
 
   if (isExternal) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        download={download}
+      >
         {content}
       </a>
     )
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} download={download}>
       {content}
     </Link>
   )
