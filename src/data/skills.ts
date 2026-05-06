@@ -3,15 +3,29 @@ import type { SkillCategory } from '@/types/skills'
 export const SKILL_CATEGORIES: readonly SkillCategory[] = [
   {
     title: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'SASS', 'HTML5', 'CSS3', 'CSS Modules'],
+    items: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'SASS',
+      'HTML5',
+      'JavaScript (ES6+)',
+      'CSS3',
+      'CSS Modules',
+      'Styled Components',
+    ],
   },
   {
     title: 'Qualidade & CI/CD',
     items: [
       'Vitest',
       'Testing Library',
+      'Jest',
+      'Playwright',
       'ESLint',
       'Prettier',
+      'Husky',
       'Git & GitHub',
       'GitHub Actions',
       'Vite',
