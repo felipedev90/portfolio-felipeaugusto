@@ -196,7 +196,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/use-unconde-ecommerce.git',
       live: 'https://use-unconde-ecommerce.onrender.com/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'portal',
