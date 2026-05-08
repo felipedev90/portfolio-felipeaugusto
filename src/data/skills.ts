@@ -23,6 +23,7 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
       'Testing Library',
       'Jest',
       'Playwright',
+      'E2E Testing',
       'ESLint',
       'Prettier',
       'Husky',

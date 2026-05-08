@@ -47,6 +47,27 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
+    id: 'portfolio',
+    title: 'Portfolio',
+    description:
+      'Meu portfólio pessoal, desenvolvido com Next.js 16, TypeScript e Tailwind CSS. Inclui seções de projetos, tecnologias utilizadas e informações de contato.',
+    image: '/images/projects/portfolio.webp',
+    category: 'frontend',
+    technologies: [
+      TECH_DICT.next,
+      TECH_DICT.react,
+      TECH_DICT.ts,
+      TECH_DICT.tailwind,
+      TECH_DICT.githubactions,
+      TECH_DICT.vercel,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/portfolio-felipeaugusto.git',
+      live: 'https://devfelipeaugusto.com.br',
+    },
+    featured: false,
+  },
+  {
     id: 'freelancer',
     title: 'Dev Freelancer',
     description:
@@ -92,6 +113,28 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    id: 'lacrei-saude',
+    title: 'Lacrei Saúde',
+    description:
+      'Projeto desenvolvido como parte do processo seletivo para pessoa voluntária de Front-end da Lacrei Saúde, plataforma de saúde inclusiva para a comunidade LGBTQIAPN+.',
+    image: '/images/projects/lacrei-saude.webp',
+    category: 'frontend',
+    technologies: [
+      TECH_DICT.next,
+      TECH_DICT.ts,
+      TECH_DICT.styledcomponents,
+      TECH_DICT.jest,
+      TECH_DICT.testinglibrary,
+      TECH_DICT.githubactions,
+      TECH_DICT.vercel,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/lacrei-saude.git',
+      live: 'https://lacrei-saude-teste-tecnico-felipe-augusto.vercel.app/',
+    },
+    featured: false,
+  },
+  {
     id: 'selma-bolos',
     title: 'Selma Bolos',
     description:
@@ -114,20 +157,6 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: 'portal',
-    title: 'Portal Viagens',
-    description:
-      'Aplicação web em Next.js 15 com TypeScript que lista 8 destinos turísticos europeus. Utiliza rotas baseadas em arquivos para as páginas Home e Listagem, rota dinâmica [id] para a página de detalhe de cada destino, layout global com Header e Footer reutilizáveis via layout.tsx, CSS Modules para estilização com escopo isolado, next/link para navegação SPA, next/image para otimização de imagens.',
-    image: '/images/projects/portal-viagens.webp',
-    category: 'frontend',
-    technologies: [TECH_DICT.next, TECH_DICT.ts, TECH_DICT.sass, TECH_DICT.vercel],
-    links: {
-      github: 'https://github.com/felipedev90/portal-viagens.git',
-      live: 'https://portal-viagens-nu.vercel.app/',
-    },
-    featured: true,
-  },
-  {
     id: 'asimov',
     title: 'Asimov Hero',
     description:
@@ -146,6 +175,40 @@ export const PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/felipedev90/asimov-teste-tecnico.git',
       live: 'https://asimov-hero-felipe-augusto.vercel.app/',
+    },
+    featured: true,
+  },
+  {
+    id: 'mini-ecommerce',
+    title: 'Mini E-commerce',
+    description:
+      'Este projeto é um mini e-commerce funcional desenvolvido como parte do desafio técnico para uma vaga de Desenvolvedor Frontend Júnior. Mini e-commerce (React + Vite) com API em Express, carrinho com Context API e persistência no LocalStorage. Busca, filtro por categoria e rotas com React Router.',
+    image: '/images/projects/mini-ecommerce.webp',
+    category: 'frontend',
+    technologies: [
+      TECH_DICT.react,
+      TECH_DICT.vite,
+      TECH_DICT.js,
+      TECH_DICT.tailwind,
+      TECH_DICT.node,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/use-unconde-ecommerce.git',
+      live: 'https://use-unconde-ecommerce.onrender.com/',
+    },
+    featured: true,
+  },
+  {
+    id: 'portal',
+    title: 'Portal Viagens',
+    description:
+      'Aplicação web em Next.js 15 com TypeScript que lista 8 destinos turísticos europeus. Utiliza rotas baseadas em arquivos para as páginas Home e Listagem, rota dinâmica [id] para a página de detalhe de cada destino, layout global com Header e Footer reutilizáveis via layout.tsx, CSS Modules para estilização com escopo isolado, next/link para navegação SPA, next/image para otimização de imagens.',
+    image: '/images/projects/portal-viagens.webp',
+    category: 'frontend',
+    technologies: [TECH_DICT.next, TECH_DICT.ts, TECH_DICT.sass, TECH_DICT.vercel],
+    links: {
+      github: 'https://github.com/felipedev90/portal-viagens.git',
+      live: 'https://portal-viagens-nu.vercel.app/',
     },
     featured: true,
   },
