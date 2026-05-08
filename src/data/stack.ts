@@ -12,6 +12,7 @@ export const TECH_DICT = {
   next: { name: 'Next.js', icon: '/images/stacks/nextjs.svg' },
   tailwind: { name: 'Tailwind CSS', icon: '/images/stacks/tailwindcss.svg' },
   sass: { name: 'SASS', icon: '/images/stacks/sass.svg' },
+  styledcomponents: { name: 'Styled Components', icon: '/images/stacks/styledcomponents.svg' },
   bootstrap: { name: 'Bootstrap', icon: '/images/stacks/bootstrap.svg' },
   zustand: { name: 'Zustand', icon: '/images/stacks/zustand.svg' },
 
@@ -36,6 +37,7 @@ export const TECH_DICT = {
   vitest: { name: 'Vitest', icon: '/images/stacks/vitest.svg' },
   playwright: { name: 'Playwright', icon: '/images/stacks/playwright.svg' },
   testinglibrary: { name: 'Testing Library', icon: '/images/stacks/testinglibrary.svg' },
+  jest: { name: 'Jest', icon: '/images/stacks/jest.svg' },
 
   ia: { name: 'Claude', icon: '/images/stacks/claude.svg' },
 } as const satisfies Record<string, Technology>
