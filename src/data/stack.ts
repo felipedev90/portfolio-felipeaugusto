@@ -38,8 +38,6 @@ export const TECH_DICT = {
   playwright: { name: 'Playwright', icon: '/images/stacks/playwright.svg' },
   testinglibrary: { name: 'Testing Library', icon: '/images/stacks/testinglibrary.svg' },
   jest: { name: 'Jest', icon: '/images/stacks/jest.svg' },
-
-  ia: { name: 'Claude', icon: '/images/stacks/claude.svg' },
 } as const satisfies Record<string, Technology>
 
 export const CORE_STACK: Technology[] = [
@@ -62,6 +60,7 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
       TECH_DICT.next,
       TECH_DICT.tailwind,
       TECH_DICT.sass,
+      TECH_DICT.styledcomponents,
       TECH_DICT.bootstrap,
       TECH_DICT.zustand,
     ],
@@ -77,6 +76,7 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
       TECH_DICT.eslint,
       TECH_DICT.vitest,
       TECH_DICT.testinglibrary,
+      TECH_DICT.jest,
       TECH_DICT.playwright,
       TECH_DICT.figma,
       TECH_DICT.vercel,
