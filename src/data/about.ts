@@ -1,11 +1,11 @@
 import type { AboutContent } from '@/types/about'
 
 export const ABOUT: AboutContent = {
-  title: 'Inspetor de qualidade que virou',
-  titleHighlight: 'desenvolvedor',
+  title: 'Desenvolvedor frontend movido a',
+  titleHighlight: 'qualidade',
   paragraphs: [
-    'Passei 10 anos garantindo tolerâncias de milésimos em peças automotivas. Hoje aplico o mesmo rigor em testes automatizados, CI/CD e code review.',
-    'Estudante de Análise e Desenvolvimento de Sistemas, formado em Desenvolvimento Frontend e em transição full-time para tecnologia desde 2025, com foco em React, Next.js, TypeScript e Node.js. Entrego produtos reais em produção.',
-    'Busco oportunidades como Desenvolvedor Frontend Júnior, preferencialmente em equipes que valorizam qualidade de código e cultura de testes.',
+    'Desenvolvo interfaces em React, Next.js e TypeScript, com produtos reais em produção. Atualmente contribuo como voluntário no Lacrei Saúde, trabalhando em sprints com refatoração de componentes, Design System e testes automatizados em uma plataforma de saúde inclusiva.',
+    'Antes de migrar para a tecnologia, passei mais de dez anos na indústria automotiva garantindo tolerâncias de milésimos. Esse rigor não ficou para trás: hoje ele aparece nos testes automatizados, nos pipelines de CI/CD e no cuidado com performance e acessibilidade de cada projeto.',
+    'Procuro um time onde eu possa crescer ao lado de pessoas mais experientes, em que code review e pareamento sejam parte da rotina e a qualidade seja responsabilidade de todos.',
   ],
 } as const satisfies AboutContent
