@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'portfolio',
-    title: 'Portfolio',
+    title: 'Portfólio',
     description:
       'Meu portfólio pessoal, desenvolvido com Next.js 16, TypeScript e Tailwind CSS. Inclui seções de projetos, tecnologias utilizadas e informações de contato.',
     image: '/images/projects/portfolio.webp',
@@ -89,26 +89,6 @@ export const PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/felipedev90/felipe-dev.git',
       live: 'https://www.felipeaugustodev.com.br/',
-    },
-    featured: true,
-  },
-  {
-    id: 'brunelli-irezumi',
-    title: 'Brunelli Irezumi',
-    description:
-      'Site institucional para estúdio de tatuagem japonesa em Jundiaí-SP. Next.js 15 App Router, TypeScript, TailwindCSS. SEO completo com Metadata, Open Graph, JSON-LD Schema (TattooParlor), next/font e next/image otimizados. Lighthouse 97/100/100/100. Deploy na Vercel com domínio personalizado.',
-    image: '/images/projects/brunelli-irezumi.webp',
-    category: 'frontend',
-    technologies: [
-      TECH_DICT.next,
-      TECH_DICT.ts,
-      TECH_DICT.tailwind,
-      TECH_DICT.githubactions,
-      TECH_DICT.vercel,
-    ],
-    links: {
-      github: 'https://github.com/felipedev90/brunelli-irezumi',
-      live: 'https://brunelli-irezumi.com.br/',
     },
     featured: true,
   },
