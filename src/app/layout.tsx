@@ -30,7 +30,7 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://devfelipeaugusto.com.br'),
   title: {
-    default: 'Felipe Augusto — Frontend Developer',
+    default: 'Felipe Augusto | Frontend Developer',
     template: '%s | Felipe Augusto',
   },
   description:
