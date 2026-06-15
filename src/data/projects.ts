@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
     id: 'cidadeviva-api',
     title: 'Cidade Viva-API',
     description:
-      'API REST de blog sobre cultura urbana, ciclismo e lifestyle de Jundiaí. Node.js, Express, TypeScript, MongoDB e Mongoose. Autenticação JWT, validação com Zod e deploy no Render.',
+      'API REST de blog sobre cultura urbana, ciclismo e lifestyle de Jundiaí. Node.js, Express, TypeScript, MongoDB e Mongoose. Autenticação JWT, validação com Zod e deploy no Render. Frontend em desenvolvimento para integração  Fullstack completa.',
     image: '/images/projects/cidadeviva-api.webp',
     category: 'backend',
     technologies: [
@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
     id: 'lacrei-saude',
     title: 'Lacrei Saúde',
     description:
-      'Projeto desenvolvido como parte do processo seletivo para pessoa voluntária de Front-end da Lacrei Saúde, plataforma de saúde inclusiva para a comunidade LGBTQIAPN+.',
+      'Aplicação desenvolvida como desafio técnico para o voluntariado de Frontend da Lacrei Saúde, plataforma de saúde inclusiva para a comunidade LGBTQIAPN+. Construída com Next.js (App Router), TypeScript e Styled-Components com design tokens baseados no Marsha Design System. Inclui testes unitários com Jest e Testing Library, CI/CD com GitHub Actions, acessibilidade testada com leitor de tela NVDA e SEO técnico com Open Graph e JSON-LD Schema.org. Lighthouse: Performance 98 · Accessibility 100 · Best Practices 100 · SEO 100.',
     image: '/images/projects/lacrei-saude.webp',
     category: 'frontend',
     technologies: [
