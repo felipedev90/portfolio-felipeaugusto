@@ -20,7 +20,9 @@ export const TECH_DICT = {
   node: { name: 'Node.js', icon: '/images/stacks/nodejs3.svg' },
   fastify: { name: 'Fastify', icon: '/images/stacks/fastify.svg' },
   postgres: { name: 'PostgreSQL', icon: '/images/stacks/postgresql.svg' },
+  mongodb: { name: 'MongoDB', icon: '/images/stacks/mongodb.svg' },
   prisma: { name: 'Prisma', icon: '/images/stacks/prisma.svg' },
+  express: { name: 'Express', icon: '/images/stacks/express.svg' },
   jwt: { name: 'JWT', icon: '/images/stacks/jwt.svg' },
   zod: { name: 'Zod', icon: '/images/stacks/zod.svg' },
 
@@ -90,6 +92,8 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
       TECH_DICT.fastify,
       TECH_DICT.postgres,
       TECH_DICT.prisma,
+      TECH_DICT.mongodb,
+      TECH_DICT.express,
       TECH_DICT.zod,
       TECH_DICT.jwt,
     ],
