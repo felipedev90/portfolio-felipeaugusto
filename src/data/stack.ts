@@ -48,6 +48,9 @@ export const CORE_STACK: Technology[] = [
   TECH_DICT.ts,
   TECH_DICT.sass,
   TECH_DICT.tailwind,
+  TECH_DICT.node,
+  TECH_DICT.postgres,
+  TECH_DICT.mongodb,
 ]
 
 export const STACKS_PAGE_DATA: TechCategory[] = [

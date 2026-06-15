@@ -45,8 +45,9 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/devstore-api.git',
       live: 'https://dev-store-zeta.vercel.app/',
     },
-    featured: false,
+    featured: true,
   },
+
   {
     id: 'portfolio',
     title: 'Portfólio',
@@ -68,6 +69,50 @@ export const PROJECTS: Project[] = [
       live: 'https://devfelipeaugusto.com.br',
     },
     featured: false,
+  },
+  {
+    id: 'brunelli-irezumi',
+    title: 'Brunelli Irezumi',
+    description:
+      'Site institucional para estúdio de tatuagem japonesa em Jundiaí-SP. Next.js 15 App Router, TypeScript, TailwindCSS. SEO completo com Metadata, Open Graph, JSON-LD Schema (TattooParlor), next/font e next/image otimizados. Lighthouse 97/100/100/100. Deploy na Vercel com domínio personalizado.',
+    image: '/images/projects/brunelli-irezumi.webp',
+    category: 'frontend',
+    technologies: [
+      TECH_DICT.next,
+      TECH_DICT.ts,
+      TECH_DICT.tailwind,
+      TECH_DICT.vitest,
+      TECH_DICT.eslint,
+      TECH_DICT.githubactions,
+      TECH_DICT.vercel,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/brunelli-irezumi',
+      live: 'https://brunelli-irezumi.com.br/',
+    },
+    featured: true,
+  },
+  {
+    id: 'cidadeviva-api',
+    title: 'Cidade Viva-API',
+    description:
+      'API REST de blog sobre cultura urbana, ciclismo e lifestyle de Jundiaí. Node.js, Express, TypeScript, MongoDB e Mongoose. Autenticação JWT, validação com Zod e deploy no Render.',
+    image: '/images/projects/cidadeviva-api.webp',
+    category: 'backend',
+    technologies: [
+      TECH_DICT.node,
+      TECH_DICT.express,
+      TECH_DICT.ts,
+      TECH_DICT.mongodb,
+      TECH_DICT.zod,
+      TECH_DICT.jwt,
+      TECH_DICT.eslint,
+      TECH_DICT.githubactions,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/cidadeviva-api.git',
+    },
+    featured: true,
   },
   {
     id: 'freelancer',
@@ -93,28 +138,6 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: 'brunelli-irezumi',
-    title: 'Brunelli Irezumi',
-    description:
-      'Site institucional para estúdio de tatuagem japonesa em Jundiaí-SP. Next.js 15 App Router, TypeScript, TailwindCSS. SEO completo com Metadata, Open Graph, JSON-LD Schema (TattooParlor), next/font e next/image otimizados. Lighthouse 97/100/100/100. Deploy na Vercel com domínio personalizado.',
-    image: '/images/projects/brunelli-irezumi.webp',
-    category: 'frontend',
-    technologies: [
-      TECH_DICT.next,
-      TECH_DICT.ts,
-      TECH_DICT.tailwind,
-      TECH_DICT.vitest,
-      TECH_DICT.eslint,
-      TECH_DICT.githubactions,
-      TECH_DICT.vercel,
-    ],
-    links: {
-      github: 'https://github.com/felipedev90/brunelli-irezumi',
-      live: 'https://brunelli-irezumi.com.br/',
-    },
-    featured: true,
-  },
-  {
     id: 'lacrei-saude',
     title: 'Lacrei Saúde',
     description:
@@ -134,7 +157,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/lacrei-saude.git',
       live: 'https://lacrei-saude-teste-tecnico-felipe-augusto.vercel.app/',
     },
-    featured: false,
+    featured: true,
   },
   {
     id: 'expense-tracker',
@@ -157,7 +180,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/expense-tracker.git',
       live: 'https://expense-tracker-tawny-beta-38.vercel.app/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'selma-bolos',
@@ -179,13 +202,13 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/selmabolos.git',
       live: 'https://selmabolos.com.br/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'asimov',
     title: 'Asimov Hero',
     description:
-      'Hero section do zero para landing page de curso de Python, com layout animado. Construído com Next.js 16, TypeScript, Tailwind com design tokens via @theme, e Motion para animações. Lighthouse 100 em SEO e Best Practices.',
+      'Hero section para teste técnico na Asimov Academy, com layout animado. Construído com Next.js 16, TypeScript, Tailwind com design tokens via @theme, e Motion para animações. Lighthouse 100 em SEO e Best Practices.',
     image: '/images/projects/asimov.webp',
     category: 'frontend',
     technologies: [
@@ -201,7 +224,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/asimov-teste-tecnico.git',
       live: 'https://asimov-hero-felipe-augusto.vercel.app/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'mini-ecommerce',
