@@ -30,19 +30,20 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://devfelipeaugusto.com.br'),
   title: {
-    default: 'Felipe Augusto | Frontend Developer',
+    default: 'Felipe Augusto | Fullstack Developer',
     template: '%s | Felipe Augusto',
   },
   description:
-    'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript. Portfolio de projetos em produção com foco em performance, acessibilidade e qualidade de código.',
+    'Fullstack Developer construindo produtos digitais com React, Next.js, TypeScript e Node.js. Portfolio de projetos em produção com foco em performance, acessibilidade e qualidade de código.',
   keywords: [
-    'Frontend Developer',
+    'Fullstack Developer',
     'React',
     'Next.js',
     'TypeScript',
+    'Node.js',
     'Portfolio',
     'Felipe Augusto',
-    'Desenvolvedor Frontend',
+    'Desenvolvedor Fullstack',
     'Jundiaí',
   ],
   authors: [{ name: 'Felipe Augusto', url: 'https://devfelipeaugusto.com.br' }],
@@ -52,23 +53,23 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     url: 'https://devfelipeaugusto.com.br',
     siteName: 'Felipe Augusto',
-    title: 'Felipe Augusto — Frontend Developer',
+    title: 'Felipe Augusto — Fullstack Developer',
     description:
-      'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript.',
+      'Fullstack Developer construindo produtos digitais com React, Next.js, TypeScript e Node.js.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Felipe Augusto — Frontend Developer',
+        alt: 'Felipe Augusto — Fullstack Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Felipe Augusto — Frontend Developer',
+    title: 'Felipe Augusto — Fullstack Developer',
     description:
-      'Frontend Developer construindo produtos digitais com React, Next.js e TypeScript.',
+      'Fullstack Developer construindo produtos digitais com React, Next.js, TypeScript e Node.js.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -121,14 +122,14 @@ export default async function RootLayout({
                 'https://github.com/felipedev90',
                 'https://www.linkedin.com/in/felipesilva90/',
               ],
-              jobTitle: 'Frontend Developer',
+              jobTitle: 'Fullstack Developer',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Jundiaí',
                 addressRegion: 'SP',
                 addressCountry: 'BR',
               },
-              knowsAbout: ['React', 'Next.js', 'TypeScript', 'Frontend Development'],
+              knowsAbout: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Fullstack Development'],
             }),
           }}
         />

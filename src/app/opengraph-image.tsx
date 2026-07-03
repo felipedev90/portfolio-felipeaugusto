@@ -30,7 +30,7 @@ export default async function OpengraphImage() {
         }}
       >
         <div style={{ width: '48px', height: '2px', background: '#d4a574' }} />
-        Frontend Developer
+        Fullstack Developer
       </div>
 
       <div
@@ -83,6 +83,8 @@ export default async function OpengraphImage() {
           <span>Next.js</span>
           <span style={{ color: '#3a3830' }}>·</span>
           <span>TypeScript</span>
+          <span style={{ color: '#3a3830' }}>·</span>
+          <span>Node.js</span>
         </div>
         <div style={{ color: '#6b6960' }}>devfelipeaugusto.com.br</div>
       </div>
