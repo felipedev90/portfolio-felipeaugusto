@@ -3,15 +3,22 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Link, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
+import { cn } from '@/lib/cn'
 import type { Project } from '@/types/projects'
 
 type ProjectCardProps = {
   project: Project
   isActive?: boolean
   priority?: boolean
+  variant?: 'carousel' | 'grid'
 }
 
-export function ProjectCard({ project, isActive = false, priority = false }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  isActive = false,
+  priority = false,
+  variant = 'grid',
+}: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   // Define se o texto é longo o suficiente para precisar do botão
@@ -19,11 +26,15 @@ export function ProjectCard({ project, isActive = false, priority = false }: Pro
 
   return (
     <div
-      className={`
-        group relative flex flex-col w-[80vw] sm:w-80 md:w-full shrink-0 overflow-hidden 
-        rounded-md border border-border bg-bg-2 transition-all duration-500
-        ${isActive ? 'opacity-100 scale-100' : 'opacity-50 scale-95 md:opacity-100 md:scale-100'}
-      `}
+      className={cn(
+        'group relative flex flex-col w-[80vw] sm:w-80 md:w-full shrink-0 overflow-hidden',
+        'rounded-md border border-border bg-bg-2 transition-all duration-500',
+        variant === 'carousel'
+          ? isActive
+            ? 'opacity-100 scale-100'
+            : 'opacity-50 scale-95 md:opacity-100 md:scale-100'
+          : 'opacity-100 scale-100',
+      )}
     >
       {/* Imagem + Gaveta */}
       {/* Adicionado shrink-0 aqui para a imagem não amassar quando o texto expandir */}
@@ -38,12 +49,14 @@ export function ProjectCard({ project, isActive = false, priority = false }: Pro
 
         {/* Gaveta de Techs */}
         <div
-          className={`
-          absolute bottom-0 left-0 w-full flex items-center justify-center gap-3 
-          bg-bg-3/95 backdrop-blur-md px-4 py-3 border-t border-border-strong
-          transition-transform duration-500 ease-out
-          ${isActive ? 'translate-y-0' : 'translate-y-full lg:group-hover:translate-y-0'}
-        `}
+          className={cn(
+            'absolute bottom-0 left-0 w-full flex items-center justify-center gap-3',
+            'bg-bg-3/95 backdrop-blur-md px-4 py-3 border-t border-border-strong',
+            'transition-transform duration-500 ease-out',
+            variant === 'carousel' && isActive
+              ? 'translate-y-0'
+              : 'translate-y-full lg:group-hover:translate-y-0',
+          )}
         >
           {project.technologies.map((tech, index) => (
             <div key={tech.name} className="relative w-7 h-7" title={tech.name}>

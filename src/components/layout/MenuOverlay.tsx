@@ -26,6 +26,9 @@ export function MenuOverlay({ open, onClose }: MenuOverlayProps) {
     } else {
       document.body.style.overflow = ''
     }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [open])
 
   return (
