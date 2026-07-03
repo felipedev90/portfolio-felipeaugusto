@@ -48,6 +48,7 @@ export function FeaturedProjectsCarousel({ projects }: Props) {
             project={project}
             isActive={index === selectedIndex}
             priority={index < 2}
+            variant="carousel"
           />
         ))}
       </div>
