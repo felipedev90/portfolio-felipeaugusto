@@ -36,7 +36,7 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
     ],
   },
   {
-    title: 'Backend & API - Em estudo',
+    title: 'Backend & API',
     items: ['Node.js', 'PostgreSQL', 'Fastify', 'Prisma', 'MongoDB', 'Express'],
   },
 ] as const satisfies readonly SkillCategory[]

@@ -89,7 +89,7 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
     ],
   },
   {
-    title: 'Em estudo - Backend & API',
+    title: 'Backend & API',
     stacks: [
       TECH_DICT.node,
       TECH_DICT.fastify,
