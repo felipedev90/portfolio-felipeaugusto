@@ -48,8 +48,8 @@ export function Hero() {
           {HERO.tagline}
         </p>
         <Button
-          href="/felipe_augusto_frontend_cv.pdf"
-          download="felipe-augusto-frontend-cv.pdf"
+          href="/felipe_augusto_fullstack_cv.pdf"
+          download="felipe-augusto-fullstack-cv.pdf"
           trailingIcon={Download}
           variant="primary"
         >
