@@ -47,7 +47,33 @@ export const PROJECTS: Project[] = [
     },
     featured: true,
   },
-
+  {
+    id: 'kinogarten',
+    title: 'KinoGarten',
+    description:
+      'Plataforma de eventos e ingressos de cinema, desenvolvida como desafio técnico Elite Dev da Verzel. Integração com API (TMDb), mapa de assentos interativo, checkout com pagamento simulado, ingresso com QR code HMAC não forjável e validação de portaria em tempo real (câmera e código manual). Autenticação JWT própria com 3 papéis, proteção contra concorrência via constraint de banco, testes automatizados (Vitest + Playwright E2E) com CI isolado em banco de teste. Lighthouse 97/100/100/100.',
+    image: '/images/projects/kinogarten.webp',
+    category: 'fullstack',
+    technologies: [
+      TECH_DICT.next,
+      TECH_DICT.ts,
+      TECH_DICT.tailwind,
+      TECH_DICT.postgres,
+      TECH_DICT.prisma,
+      TECH_DICT.jwt,
+      TECH_DICT.zod,
+      TECH_DICT.docker,
+      TECH_DICT.vitest,
+      TECH_DICT.playwright,
+      TECH_DICT.githubactions,
+      TECH_DICT.vercel,
+    ],
+    links: {
+      github: 'https://github.com/felipedev90/verzel-elitedev-eventos.git',
+      live: 'https://verzel-elitedev-eventos.vercel.app/',
+    },
+    featured: true,
+  },
   {
     id: 'portfolio',
     title: 'Portfólio',
@@ -135,7 +161,7 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/felipedev90/felipe-dev.git',
       live: 'https://www.felipeaugustodev.com.br/',
     },
-    featured: true,
+    featured: false,
   },
   {
     id: 'lacrei-saude',
