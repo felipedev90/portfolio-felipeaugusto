@@ -27,6 +27,7 @@ export const TECH_DICT = {
   zod: { name: 'Zod', icon: '/images/stacks/zod.svg' },
 
   // Qualidade, Ferramentas & Métodos
+  docker: { name: 'Docker', icon: '/images/stacks/docker.svg' },
   git: { name: 'Git', icon: '/images/stacks/git.svg' },
   github: { name: 'GitHub', icon: '/images/stacks/github.svg' },
   githubactions: { name: 'GitHub Actions', icon: '/images/stacks/githubactions.svg' },
@@ -83,6 +84,7 @@ export const STACKS_PAGE_DATA: TechCategory[] = [
       TECH_DICT.testinglibrary,
       TECH_DICT.jest,
       TECH_DICT.playwright,
+      TECH_DICT.docker,
       TECH_DICT.figma,
       TECH_DICT.vercel,
       TECH_DICT.vscode,
